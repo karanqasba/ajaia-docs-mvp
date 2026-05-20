@@ -1,0 +1,16 @@
+import { describe, it, expect } from 'vitest';
+import { validateDocumentTitle } from './validation';
+
+describe('validateDocumentTitle', () => {
+  it('rejects empty titles', () => {
+    expect(validateDocumentTitle('')).toBeTruthy();
+  });
+
+  it('rejects whitespace only titles', () => {
+    expect(validateDocumentTitle('   ')).toBeTruthy();
+  });
+
+  it('accepts valid titles', () => {
+    expect(validateDocumentTitle('AI Notes')).toBeFalsy();
+  });
+});
