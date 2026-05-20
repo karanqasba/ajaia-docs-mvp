@@ -1,9 +1,23 @@
 export const USERS = [
-  { id: 'u_karan', name: 'Karan Qasba', email: 'karan@example.com' },
-  { id: 'u_reviewer', name: 'Ajaia Reviewer', email: 'reviewer@ajaia.ai' },
-  { id: 'u_teammate', name: 'Teammate User', email: 'teammate@example.com' }
+  {
+    id: 'karan',
+    name: 'Karan',
+    email: 'karan@ajaia.com',
+    password: 'ajaia123',
+    initials: 'K',
+  },
+  {
+    id: 'adam',
+    name: 'Adam',
+    email: 'adam@ajaia.com',
+    password: 'ajaia123',
+    initials: 'A',
+  },
+  {
+    id: 'sasha',
+    name: 'Sasha',
+    email: 'sasha@ajaia.com',
+    password: 'ajaia123',
+    initials: 'S',
+  },
 ];
-
-export function getUserByEmail(email) {
-  return USERS.find((user) => user.email.toLowerCase() === String(email).toLowerCase());
-}
